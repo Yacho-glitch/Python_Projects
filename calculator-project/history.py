@@ -25,5 +25,3 @@ def load_history():
     except FileNotFoundError:
         return []
     
-h = ["2 + 2 = 4", "4 + 4 = 8"]
-save_history(h)

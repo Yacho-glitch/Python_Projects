@@ -11,16 +11,19 @@ def save_history(history_list):
 
 def load_history():
     try:
-        file = open('history', 'r')
+        file = open('history.txt', 'r')
         lines = file.readlines() # Read all lines
         file.close()
 
         clean_list = []
-        for line in file:
+        for line in lines:
             clean_line = line.strip()
-            clean_list.append(clean_list)
+            clean_list.append(clean_line)
 
         return clean_list
      
     except FileNotFoundError:
         return []
+    
+h = ["2 + 2 = 4", "4 + 4 = 8"]
+save_history(h)

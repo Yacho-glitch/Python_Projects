@@ -22,34 +22,34 @@ while True:
 
     choice = input("\nChoose (1-6): ")
 
-    if (choice == 1):
+    if (choice == "1"):
         a = get_number("Enter first number : ")
         b = get_number("Enter second number : ")
         result = calc.add(a, b)
         print(f"\n✅ Result: {result}")
 
-    elif (choice == 2):
+    elif (choice == "2"):
         a = get_number("Enter first number : ")
         b = get_number("Enter second number : ")
         result = calc.subtract(a, b)
         print(f"\n✅ Result: {result}")
 
-    elif (choice == 3):
+    elif (choice == "3"):
         a = get_number("Enter first number : ")
         b = get_number("Enter second number : ")
         result = calc.multiply(a, b)
         print(f"\n✅ Result: {result}")
 
-    elif (choice == 4):
+    elif (choice == "4"):
         a = get_number("Enter first number : ")
         b = get_number("Enter second number : ")
         result = calc.divide(a, b)
         print(f"\n✅ Result: {result}")
 
-    elif (choice == 5):
+    elif (choice == "5"):
         calc.show_history()
 
-    elif (choice == 6):
+    elif (choice == "6"):
         save_history(calc.history)
         print("\n👋 Goodbye! History saved.")
         break

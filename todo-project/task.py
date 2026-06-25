@@ -13,6 +13,12 @@ class Task:
         self.done = False
 
     def show(self):
-        pass
+        if (self.done):
+            return f"[X] {self.title} ({self.date})"
+        else:
+            return f"[ ] {self.title} ({self.date})"
 
     
+task = Task("Buy milk", "2025-15-12")
+task.mark_done()
+print(task.show())

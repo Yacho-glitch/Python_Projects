@@ -47,7 +47,7 @@ def confirm(question):
         elif (answer == "n" or answer == "no"):
             return False
         else:
-            print("Must type (y/n)")
+            print("❌ Please type (y/n)")
 
 if __name__ == "__main__":
     result = confirm("Are you sure")

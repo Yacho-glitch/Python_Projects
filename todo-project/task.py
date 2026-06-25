@@ -19,6 +19,13 @@ class Task:
             return f"[ ] {self.title} ({self.date})"
 
     
-task = Task("Buy milk", "2025-15-12")
-task.mark_done()
+task = Task("Buy milk", "2025-05-12")
+task.mark_done()             
 print(task.show())
+
+task2 = Task("reading book", "2023-08-01")
+print(task2.show())
+
+task3 = Task("Playing video game", "2015-05-05")
+task3.mark_undone()
+print(task3.show())

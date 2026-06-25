@@ -1,3 +1,5 @@
+import os
+
 def get_string(prompt):
     while True:
         user_input = input(prompt)
@@ -49,9 +51,14 @@ def confirm(question):
         else:
             print("❌ Please type (y/n)")
 
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+
 if __name__ == "__main__":
-    result = confirm("Are you sure")
-    print(f"User said: {result}")
+    print("Hello!")
+    input("Press Enter to clear...")
+    clear_screen()
+    print("Screen is clean!")
             
 
 

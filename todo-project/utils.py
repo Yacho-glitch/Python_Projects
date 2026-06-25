@@ -6,3 +6,37 @@ def get_string(prompt):
         else:
             print("❌ Cannot be empty!")
             continue
+
+def get_date():
+    while True:
+        user_date = input("Enter date (YYYY-MM-DD) : ")
+
+        if (len(user_date) != 10):
+            print("❌ Must be 10 characters!")
+            continue
+        
+        if (user_date[4] != "-" and user_date[7] != "-"):
+            print("❌ Must use - as separator!")
+            continue
+
+        try:
+            year = int(user_date[0:4])
+            month = int(user_date[5:7])
+            day = int(user_date[8:10])
+        except ValueError:
+            print("❌ Year, month, day must be numbers!")
+            continue
+
+        if (month >= 1 and month <= 12):
+            print("❌ Month must be 01-12!")
+            continue
+
+        if (day >= 1 and day <= 31):
+            print("❌ Day must be 01-31!")
+            continue
+
+        return user_date
+
+            
+
+

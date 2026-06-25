@@ -15,7 +15,7 @@ def get_date():
             print("❌ Must be 10 characters!")
             continue
         
-        if (user_date[4] != "-" and user_date[7] != "-"):
+        if (user_date[4] != "-" or user_date[7] != "-"):
             print("❌ Must use - as separator!")
             continue
 
@@ -27,16 +27,20 @@ def get_date():
             print("❌ Year, month, day must be numbers!")
             continue
 
-        if (month >= 1 and month <= 12):
+        if (month < 1 or month > 12):
             print("❌ Month must be 01-12!")
             continue
 
-        if (day >= 1 and day <= 31):
+        if (day < 1 or day > 31):
             print("❌ Day must be 01-31!")
             continue
 
         return user_date
 
+
+if __name__ == "__main__":
+    date = get_date()
+    print(f"Valid date: {date}")
             
 
 

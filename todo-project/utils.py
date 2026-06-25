@@ -37,10 +37,21 @@ def get_date():
 
         return user_date
 
+def confirm(question):
+    while True:
+        answer = input(f"{question}? (y/n) : ")
+        answer = answer.lower().strip()
+
+        if (answer == "y" or answer == "yes"):
+            return True
+        elif (answer == "n" or answer == "no"):
+            return False
+        else:
+            print("Must type (y/n)")
 
 if __name__ == "__main__":
-    date = get_date()
-    print(f"Valid date: {date}")
+    result = confirm("Are you sure")
+    print(f"User said: {result}")
             
 
 

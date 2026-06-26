@@ -18,13 +18,25 @@ class TaskManager:
                 print(f"{index}. {task.show()}")
             print("---------------------")
 
+    def mark_done(self, index):
+        if (index < 0 or index >= len(self.tasks)):
+            print("❌ Invalid task number!")
+            return
+        
+        self.tasks[index].mark_done()
+        print("✅ Task marked as done!")
+
+
 if __name__ == "__main__":
     manager = TaskManager()
-    manager.show_all_tasks()
+    # manager.show_all_tasks()
 
     manager.add_task("Learn Java", "2027-18-03")
     manager.add_task("Learn French", "2023-05-05")
 
+    manager.show_all_tasks()
+
+    manager.mark_done(0)
     manager.show_all_tasks()
 
     # print(f"Number of tasks: {len(manager.tasks)}")

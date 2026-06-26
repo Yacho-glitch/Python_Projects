@@ -34,7 +34,8 @@ class TaskManager:
         self.tasks.pop(index)
 
     def get_tasks(self):
-
+        return self.tasks 
+    
 if __name__ == "__main__":
     manager = TaskManager()
     # manager.show_all_tasks()

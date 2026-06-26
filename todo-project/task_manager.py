@@ -4,19 +4,19 @@ class TaskManager:
     def __init__(self):
         self.tasks = []
 
-    def add_task(self,title, date):
+    def add_task(self, title, date):
         new_task = Task(title, date)
         self.tasks.append(new_task)
 
     def show_all_tasks(self):
-         if not self.tasks: # OR if len(self.tasks) == 0
-             print("No tasks yet!")
-             return
-         else:
-             print("-----History📝-----")
-             for index, task in enumerate(self.tasks, start=1):
-                 print(f"{index}. {task.show()}")
-                 
+        if not self.tasks: # OR if len(self.tasks) == 0
+            print("No tasks yet!")
+            return
+        else:
+            print("-----Tasks📝-----")
+            for index, task in enumerate(self.tasks, start=1):
+                print(f"{index}. {task.show()}")
+            print("---------------------")
 
 if __name__ == "__main__":
     manager = TaskManager()

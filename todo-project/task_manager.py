@@ -9,7 +9,7 @@ class TaskManager:
         self.tasks.append(new_task)
 
     def show_all_tasks(self):
-         if (self.tasks) == 0:
+         if not self.tasks: # OR if len(self.tasks) == 0
              print("No tasks yet!")
              return
          else:

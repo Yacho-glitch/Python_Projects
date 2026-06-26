@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Buy milk",
+        "date": "2025-06-12",
+        "done": false
+    },
+    {
+        "title": "Learn Python",
+        "date": "2024-03-04",
+        "done": true
+    }
+]

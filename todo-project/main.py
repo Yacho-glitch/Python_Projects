@@ -25,15 +25,18 @@ while True:
         date = get_date()
         manager.add_task(title, date)
         print("\n✅ Task added!")
+        input("\nPress Enter to continue...")
 
     elif (choice == "2"):
         manager.show_all_tasks()
+        input("\nPress Enter to continue...")
 
     elif (choice == "3"):
         manager.show_all_tasks()
         index = int(input("Which task number? ")) - 1
         manager.mark_done(index)
         print("\n✅ Task marked as done!")
+        input("\nPress Enter to continue...")
 
     elif (choice == "4"):
         manager.show_all_tasks()
@@ -42,6 +45,7 @@ while True:
         if confirm("Are you sure you want to delete"):
             manager.delete_task(index)
             print("\n✅ Task deleted!")
+        input("\nPress Enter to continue...")
 
     elif (choice == "5"):
         if confirm("Save before quitting"):
@@ -51,3 +55,4 @@ while True:
 
     else:
         print("\n❌ Invalid choice! Please type 1-5.")
+        input("\nPress Enter to continue...")

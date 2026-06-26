@@ -26,6 +26,14 @@ class TaskManager:
         self.tasks[index].mark_done()
         print("✅ Task marked as done!")
 
+    def delete_task(self, index):
+        if (index < 0 or index >= len(self.tasks)):
+            print("❌ Invalid task number!")
+            return
+        
+        self.tasks.pop(index)
+
+    def get_tasks(self):
 
 if __name__ == "__main__":
     manager = TaskManager()

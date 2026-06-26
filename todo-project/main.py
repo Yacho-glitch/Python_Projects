@@ -40,7 +40,7 @@ while True:
 
     elif (choice == "4"):
         manager.show_all_tasks()
-        index = int(input("WHich task number? "))
+        index = int(input("WHich task number? ")) - 1
 
         if confirm("Are you sure you want to delete"):
             manager.delete_task(index)

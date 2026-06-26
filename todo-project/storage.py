@@ -1,4 +1,5 @@
 import json
+from task import Task
 
 def save_tasks(tasks_list):
     dicts_list = []

@@ -48,5 +48,8 @@ if __name__ == "__main__":
     manager.mark_done(0)
     manager.show_all_tasks()
 
+    tasks = manager.get_tasks()
+    print(tasks)
+
     # print(f"Number of tasks: {len(manager.tasks)}")
     # print(manager.tasks[0].show())
